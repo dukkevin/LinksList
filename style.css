@@ -1,0 +1,157 @@
+/* VARIABLES */
+:root {
+  --main-color: #ebf0fe;
+  --second-color: #6672fb;
+  --danger-color: #e8523f;
+  --main-radius: 8px;
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STYLES */
+body {
+  min-width: 430px;
+  padding: 20px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--main-radius);
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  opacity: 40%;
+}
+
+/* LINKS LIST */
+ul {
+  width: 100%;
+  margin-top: 3em;
+  list-style: none;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2em;
+  font-size: 0.9em;
+}
+a {
+  color: #333539;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+button {
+  font-weight: 400;
+  border: none;
+  border-radius: var(--main-radius);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+/* SAVE TAB BUTTON */
+#tab-btn,
+#input-btn {
+  margin-right: 0.5em;
+  padding: 0.8em 1em;
+  color: #333539;
+  background-color: var(--main-color);
+  transition: 0.2s;
+}
+#tab-btn:hover,
+#input-btn:hover {
+  color: #fff;
+  background-color: #6672fb;
+}
+
+/* DELETE TAB BUTTON */
+#delete-btn {
+  padding: 0.8em 1em;
+  margin-left: 1.5em;
+  background-color: var(--main-color);
+  transition: 0.2s;
+}
+#delete-btn:hover {
+  color: #fff;
+  background-color: var(--danger-color);
+}
+
+.close-icon {
+  display: flex;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+  margin-left: 2em;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  font-size: 0.7rem;
+  padding: 0.6em 0.9em;
+  transition: 0.2s;
+}
+.remove-btn:hover {
+  color: #fff;
+  background-color: var(--danger-color);
+}
+
+/* COPY CONTAINER */
+.copy-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 4em;
+}
+.copy-icon {
+  margin-right: 8px;
+  transition: 0.2s;
+}
+#copy-btn:hover > svg {
+  fill: #fff;
+}
+#copy-btn {
+  padding: 0.8em 1em;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+#copy-btn i {
+  margin-right: 0.5em;
+}
+#copy-btn:hover {
+  background-color: var(--second-color);
+  color: #fff;
+}
+/* copied popup */
+.copied-info {
+  display: flex;
+  justify-content: center;
+}
+#copied-popup {
+  position: fixed;
+  opacity: 0;
+  margin-top: -20px;
+  transition: all 0.8s ease;
+  font-size: 0.6em;
+  padding: 0.6em 0.8em;
+  background-color: var(--second-color);
+  border-radius: var(--main-radius);
+  color: #fff;
+}
+#copied-popup.show {
+  margin-top: 10px;
+  opacity: 1;
+}
